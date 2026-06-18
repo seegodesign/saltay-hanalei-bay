@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none">
+  <!-- Outer circle -->
+  <circle cx="30" cy="30" r="27" stroke="#C9A55E" stroke-width="1"/>
+  <!-- Inner dashed ring -->
+  <circle cx="30" cy="30" r="20" stroke="#C9A55E" stroke-width="0.6" stroke-dasharray="3 4"/>
+  <!-- Stylised leaf/flame form -->
+  <path d="M30 46 C26 38 22 32 22 26 C22 20 26 15 30 13 C34 15 38 20 38 26 C38 32 34 38 30 46Z"
+        stroke="#C9A55E" stroke-width="1" fill="rgba(201,165,94,0.06)"/>
+  <!-- Horizontal crossbar accent -->
+  <line x1="22" y1="30" x2="38" y2="30" stroke="#C9A55E" stroke-width="0.6" stroke-linecap="round"/>
+  <!-- Top diamond -->
+  <path d="M30 10 L32 13 L30 16 L28 13 Z" stroke="#C9A55E" stroke-width="0.8" fill="rgba(201,165,94,0.2)"/>
+</svg>

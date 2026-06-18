@@ -1,0 +1,61 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/buttons.css';
+import '../styles/nav.css';
+import '../styles/hero.css';
+import '../styles/pillars.css';
+import '../styles/sanctuary.css';
+import '../styles/offerings-grid.css';
+import '../styles/experience.css';
+import '../styles/footer.css';
+import '../styles/page-hero.css';
+import '../styles/offering-detail.css';
+import '../styles/pages.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Saltay Hanalei Bay',
+  description = 'Luxury wellness experiences that restore balance, awaken vitality, and reconnect you to your highest self through holistic healing, energy medicine, and transformational care.',
+} = Astro.props;
+
+const pageTitle =
+  title === 'Saltay Hanalei Bay'
+    ? 'Saltay Hanalei Bay | Elevated Healing. Lasting Transformation.'
+    : `${title} | Saltay Hanalei Bay`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+
+    <!-- Google Fonts: Cormorant Garamond (serif) + Raleway (sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Nav />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

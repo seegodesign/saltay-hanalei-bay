@@ -1,0 +1,70 @@
+/* ============================================================
+   SALTAY HANALEI BAY — Pillars Row
+   BEM blocks: .pillars, .pillar
+   ============================================================ */
+
+/* ─── Block ────────────────────────────────────────────── */
+.pillars {
+  background-color: var(--clr-dark-mid);
+  padding-block: var(--sp-32);
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.pillars__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-32);
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--section-px);
+}
+
+/* ─── Pillar card ───────────────────────────────────────── */
+.pillar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-16);
+}
+
+.pillar__icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.pillar__title {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-cream);
+  line-height: 1.3;
+}
+
+.pillar__subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  color: var(--clr-gold);
+  letter-spacing: 0.06em;
+  margin-top: 3px;
+}
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .pillars__inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-24);
+  }
+
+  .pillar {
+    padding-bottom: var(--sp-16);
+  }
+}
+
+@media (max-width: 480px) {
+  .pillars__inner {
+    grid-template-columns: 1fr;
+  }
+}

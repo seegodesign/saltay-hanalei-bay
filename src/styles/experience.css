@@ -1,0 +1,111 @@
+/* ============================================================
+   SALTAY HANALEI BAY — Experience Section
+   BEM block: .experience
+   ============================================================ */
+
+/* ─── Block ────────────────────────────────────────────── */
+.experience {
+  position: relative;
+  background-color: var(--clr-dark);
+  background-image: url('/images/coastline.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-block: var(--section-py);
+}
+
+.experience::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.72);
+  pointer-events: none;
+}
+
+.experience__inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--section-px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+/* ─── Left column ───────────────────────────────────────── */
+.experience__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-24);
+}
+
+.experience__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--clr-cream);
+}
+
+.experience__body {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.85;
+  color: var(--clr-cream);
+  opacity: 0.82;
+}
+
+.experience__tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  color: var(--clr-gold);
+}
+
+/* ─── Right column — feature list ──────────────────────── */
+.experience__right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-32);
+}
+
+.experience__feature {
+  display: flex;
+  gap: var(--sp-16);
+  align-items: flex-start;
+}
+
+.experience__feature-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.experience__feature-title {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: 5px;
+}
+
+.experience__feature-body {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--clr-cream);
+  opacity: 0.72;
+}
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .experience__inner {
+    grid-template-columns: 1fr;
+    gap: var(--sp-48);
+  }
+}

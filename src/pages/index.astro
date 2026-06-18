@@ -1,17 +1,204 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 
+const offerings = [
+  {
+    slug: 'massage-bodywork',
+    title: 'Massage & Bodywork',
+    body: 'Therapeutic touch to release tension, improve circulation, and restore balance.',
+  },
+  {
+    slug: 'acupuncture-energy-medicine',
+    title: 'Acupuncture & Energy Medicine',
+    body: 'Ancient techniques that balance energy, support healing, and optimize well-being.',
+  },
+  {
+    slug: 'holistic-facial-rituals',
+    title: 'Holistic Facial Rituals',
+    body: 'Botanical facials that nourish, detoxify, and illuminate your natural radiance.',
+  },
+  {
+    slug: 'infrared-sauna',
+    title: 'Infrared Sauna',
+    body: 'Deep detoxification, cellular rejuvenation, and relaxation through infrared heat.',
+  },
+  {
+    slug: 'sound-healing',
+    title: 'Sound Healing',
+    body: 'Therapeutic sound journeys that calm the nervous system and restore energetic harmony.',
+  },
+  {
+    slug: 'remote-sessions',
+    title: 'Remote Sessions',
+    body: 'Metaphysical & energetic healing sessions from anywhere in the world.',
+  },
+  {
+    slug: 'wellness-retreats',
+    title: 'Wellness Retreats',
+    body: 'Immersive retreats and immersions to reset, reconnect, and transform.',
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO — video background (drop your looping video in
+       /public/video/hero.webm and uncomment the <source>)
+  ════════════════════════════════════════════════════════ -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero__video-wrapper" aria-hidden="true">
+      <video class="hero__video" autoplay loop muted playsinline poster="/images/hero-poster.jpg">
+        <source src="/video/hero.webm" type="video/webm" />
+      </video>
+    </div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <h1 class="hero__headline">
+        Elevated Healing.<br />
+        Lasting Transformation.
+      </h1>
+      <img src="/icons/spiral-rule.svg" class="hero__rule" alt="" aria-hidden="true" />
+      <p class="hero__body">
+        Luxury wellness experiences that restore balance, awaken vitality, and
+        reconnect you to your highest self through holistic healing, energy
+        medicine, and transformational care.
+      </p>
+      <a href="/booking/" class="btn btn--outline">Book Your Experience</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PILLARS — four feature callouts
+  ════════════════════════════════════════════════════════ -->
+  <section class="pillars" aria-label="Our pillars">
+    <div class="pillars__inner">
+
+      <div class="pillar">
+        <img src="/icons/lotus.svg" alt="" class="pillar__icon" width="44" height="44" aria-hidden="true" />
+        <div>
+          <p class="pillar__title">Luxury Wellness</p>
+          <p class="pillar__subtitle">For Body, Mind &amp; Spirit</p>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <img src="/icons/sun.svg" alt="" class="pillar__icon" width="44" height="44" aria-hidden="true" />
+        <div>
+          <p class="pillar__title">Holistic Healing</p>
+          <p class="pillar__subtitle">Rooted in Ancient Wisdom</p>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <img src="/icons/moon-star.svg" alt="" class="pillar__icon" width="44" height="44" aria-hidden="true" />
+        <div>
+          <p class="pillar__title">Metaphysical</p>
+          <p class="pillar__subtitle">Remote Sessions</p>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <img src="/icons/spiral.svg" alt="" class="pillar__icon" width="44" height="44" aria-hidden="true" />
+        <div>
+          <p class="pillar__title">Elevated Healing</p>
+          <p class="pillar__subtitle">Lasting Transformation</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SANCTUARY — centered text block
+  ════════════════════════════════════════════════════════ -->
+  <section class="sanctuary">
+    <div class="sanctuary__inner">
+      <span class="u-label">A Sanctuary for Transformation</span>
+      <p class="sanctuary__body">
+        At Saltay Hanalei Bay, we blend ancient healing traditions, botanical
+        therapies, and innovative wellness modalities to create deeply
+        personalized experiences that nurture your body, calm your mind,
+        elevate your energy, and inspire lasting transformation.
+      </p>
+      <p class="sanctuary__tagline">Elevated Healing. Lasting Transformation.</p>
+      <img src="/icons/spiral-rule.svg" class="sanctuary__rule" alt="" aria-hidden="true" />
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       OFFERINGS GRID — 7 service cards
+  ════════════════════════════════════════════════════════ -->
+  <section class="offerings-section">
+    <div class="offerings-section__inner">
+      <span class="u-label">Our Signature Wellness Offerings</span>
+      <div class="offerings-grid">
+        {offerings.map((o) => (
+          <a href={`/offerings/${o.slug}/`} class="offering-card">
+            <div class="offering-card__image" aria-hidden="true"></div>
+            <p class="offering-card__title">{o.title}</p>
+            <p class="offering-card__body">{o.body}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       EXPERIENCE — dark two-column section
+  ════════════════════════════════════════════════════════ -->
+  <section class="experience">
+    <div class="experience__inner">
+
+      <div class="experience__left">
+        <span class="u-label u-label--gold">The Saltay Experience</span>
+        <h2 class="experience__heading">More than a destination</h2>
+        <p class="experience__body">
+          Saltay Hanalei Bay is a sanctuary where luxury, spirituality, and
+          holistic healing come together to support your highest well-being.
+        </p>
+        <p class="experience__tagline">Elevated Healing. Lasting Transformation.</p>
+        <a href="/booking/" class="btn btn--outline" style="margin-top: 0.5rem;">
+          Book Your Transformation
+        </a>
+      </div>
+
+      <div class="experience__right">
+
+        <div class="experience__feature">
+          <img src="/icons/lotus.svg" alt="" class="experience__feature-icon" width="36" height="36" aria-hidden="true" />
+          <div>
+            <p class="experience__feature-title">Personalized Care</p>
+            <p class="experience__feature-body">Every experience is tailored to you.</p>
+          </div>
+        </div>
+
+        <div class="experience__feature">
+          <img src="/icons/sun.svg" alt="" class="experience__feature-icon" width="36" height="36" aria-hidden="true" />
+          <div>
+            <p class="experience__feature-title">Holistic Approach</p>
+            <p class="experience__feature-body">Body, mind, spirit, and energy in harmony.</p>
+          </div>
+        </div>
+
+        <div class="experience__feature">
+          <img src="/icons/spiral.svg" alt="" class="experience__feature-icon" width="36" height="36" aria-hidden="true" />
+          <div>
+            <p class="experience__feature-title">Luxury &amp; Comfort</p>
+            <p class="experience__feature-body">A serene sanctuary designed for deep restoration.</p>
+          </div>
+        </div>
+
+        <div class="experience__feature">
+          <img src="/icons/moon-star.svg" alt="" class="experience__feature-icon" width="36" height="36" aria-hidden="true" />
+          <div>
+            <p class="experience__feature-title">Transformational Results</p>
+            <p class="experience__feature-body">Feel the shift. Live the transformation.</p>
+          </div>
+        </div>
+
+      </div><!-- /.experience__right -->
+    </div><!-- /.experience__inner -->
+  </section>
+
+</BaseLayout>

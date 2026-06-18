@@ -1,0 +1,54 @@
+/* ============================================================
+   SALTAY HANALEI BAY — Inner Page Hero
+   BEM block: .page-hero
+   ============================================================ */
+
+/* ─── Block ────────────────────────────────────────────── */
+.page-hero {
+  background-color: var(--clr-dark);
+  padding-top: calc(var(--nav-h) + var(--sp-64));
+  padding-bottom: var(--sp-64);
+  padding-inline: var(--section-px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-16);
+  min-height: 42vh;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.page-hero__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+}
+
+.page-hero__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--clr-cream);
+  max-width: 720px;
+}
+
+.page-hero__rule {
+  display: block;
+  width: 60px;
+  height: 1.5px;
+  background-color: var(--clr-gold);
+}
+
+.page-hero__body {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.8;
+  color: var(--clr-cream);
+  opacity: 0.78;
+  max-width: 560px;
+}

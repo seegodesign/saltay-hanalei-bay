@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact & Locations"
+  description="Get in touch with Saltay Hanalei Bay or visit us in Kauai, Hawaii. We'd love to support your healing journey."
+>
+
+  <section class="page-hero">
+    <span class="page-hero__eyebrow">Reach Out</span>
+    <h1 class="page-hero__heading">Contact &amp; Locations</h1>
+    <span class="page-hero__rule" aria-hidden="true"></span>
+    <p class="page-hero__body">
+      We'd love to welcome you. Reach out with questions, intentions, or
+      to begin planning your healing journey.
+    </p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-section__inner">
+
+      <!-- Contact form -->
+      <div>
+        <span class="u-label" style="margin-bottom: 2rem;">Send a Message</span>
+        <form class="contact-form" name="contact" method="POST" action="/contact/thank-you/">
+
+          <div class="contact-form__group">
+            <label class="contact-form__label" for="contact-name">Full Name</label>
+            <input
+              class="contact-form__input"
+              type="text"
+              id="contact-name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="contact-form__group">
+            <label class="contact-form__label" for="contact-email">Email Address</label>
+            <input
+              class="contact-form__input"
+              type="email"
+              id="contact-email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="contact-form__group">
+            <label class="contact-form__label" for="contact-service">Service of Interest</label>
+            <select class="contact-form__select" id="contact-service" name="service">
+              <option value="">Select a service…</option>
+              <option value="massage">Massage &amp; Bodywork</option>
+              <option value="acupuncture">Acupuncture &amp; Energy Medicine</option>
+              <option value="facial">Holistic Facial Rituals</option>
+              <option value="sauna">Infrared Sauna</option>
+              <option value="sound">Sound Healing</option>
+              <option value="remote">Remote Sessions</option>
+              <option value="retreat">Wellness Retreats</option>
+              <option value="other">Other / General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="contact-form__group">
+            <label class="contact-form__label" for="contact-message">Message</label>
+            <textarea
+              class="contact-form__textarea"
+              id="contact-message"
+              name="message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div style="margin-top: 0.5rem;">
+            <button type="submit" class="btn btn--primary">Send Message</button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Locations -->
+      <div class="contact-locations">
+        <span class="u-label" style="margin-bottom: 2rem;">Find Us</span>
+
+        <div class="contact-location">
+          <p class="contact-location__name">Saltay Hanalei Bay — Kauai</p>
+          <p class="contact-location__address">
+            Hanalei Bay<br />
+            Kauai, Hawai'i<br />
+            USA
+          </p>
+          <a
+            href="https://maps.google.com/?q=Hanalei+Bay+Kauai+Hawaii"
+            class="contact-location__link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions &rsaquo;
+          </a>
+        </div>
+
+        <div class="contact-location">
+          <p class="contact-location__name">Email</p>
+          <p class="contact-location__address">
+            <a href="mailto:hello@saltayhanalei.com" class="contact-location__link" style="margin-top: 0;">
+              hello@saltayhanalei.com
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-location">
+          <p class="contact-location__name">Hours</p>
+          <p class="contact-location__address">
+            Monday – Saturday<br />
+            9:00 am – 7:00 pm HST<br />
+            <br />
+            Sunday by appointment
+          </p>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <a href="/booking/" class="btn btn--outline-dark">Book Online</a>
+        </div>
+
+      </div><!-- /.contact-locations -->
+
+    </div>
+  </section>
+
+</BaseLayout>

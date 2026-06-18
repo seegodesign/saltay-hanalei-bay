@@ -1,0 +1,68 @@
+/* ============================================================
+   SALTAY HANALEI BAY — Buttons
+   BEM block: .btn
+   ============================================================ */
+
+/* ─── Block ────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.8;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition:
+    background-color var(--ease),
+    color var(--ease),
+    border-color var(--ease);
+}
+
+/* ─── Modifiers ────────────────────────────────────────── */
+
+/* Filled gold — primary CTA */
+.btn--primary {
+  background-color: var(--clr-gold);
+  color: var(--clr-dark);
+  border-color: var(--clr-gold);
+}
+
+.btn--primary:hover {
+  background-color: var(--clr-gold-hover);
+  border-color: var(--clr-gold-hover);
+}
+
+/* Ghost on dark backgrounds */
+.btn--outline {
+  background-color: transparent;
+  color: var(--clr-cream);
+  border-color: var(--clr-gold);
+}
+
+.btn--outline:hover {
+  background-color: var(--clr-gold);
+  color: var(--clr-dark);
+}
+
+/* Ghost on cream/light backgrounds */
+.btn--outline-dark {
+  background-color: transparent;
+  color: var(--clr-text-dark);
+  border-color: var(--clr-text-dark);
+}
+
+.btn--outline-dark:hover {
+  background-color: var(--clr-text-dark);
+  color: var(--clr-cream);
+}
+
+/* Small size modifier */
+.btn--sm {
+  padding: 0.625rem 1.5rem;
+  font-size: 0.8rem;
+}

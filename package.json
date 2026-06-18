@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "saltay-hanalei-bay",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -12,6 +12,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.4.7"
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^6.4.7",
+    "typescript": "^6.0.3"
   }
 }

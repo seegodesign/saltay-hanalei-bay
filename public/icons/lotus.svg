@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"
+     stroke="#C9A55E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Centre petal -->
+  <path d="M24 40 C21 33 21 27 24 16 C27 27 27 33 24 40Z"/>
+  <!-- Left inner petal -->
+  <path d="M24 40 C17 35 12 29 11 20 C19 20 22 29 24 40Z"/>
+  <!-- Left outer petal -->
+  <path d="M24 40 C10 39 7 27 11 18 C17 22 21 31 24 40Z"/>
+  <!-- Right inner petal -->
+  <path d="M24 40 C31 35 36 29 37 20 C29 20 26 29 24 40Z"/>
+  <!-- Right outer petal -->
+  <path d="M24 40 C38 39 41 27 37 18 C31 22 27 31 24 40Z"/>
+  <!-- Stem -->
+  <path d="M24 40 L24 44"/>
+  <!-- Base water line -->
+  <path d="M14 44 Q24 47 34 44" stroke-width="1"/>
+</svg>

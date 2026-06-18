@@ -1,0 +1,93 @@
+/* ============================================================
+   SALTAY HANALEI BAY — Offering Detail Page
+   BEM block: .offering-detail
+   ============================================================ */
+
+/* ─── Block ────────────────────────────────────────────── */
+.offering-detail {
+  background-color: var(--clr-cream-light);
+  padding-block: var(--section-py);
+}
+
+.offering-detail__inner {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--section-px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+}
+
+/* ─── Image panel ───────────────────────────────────────── */
+.offering-detail__image {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: linear-gradient(160deg, #2d2a18 0%, #191c10 100%);
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+
+.offering-detail__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ─── Content panel ─────────────────────────────────────── */
+.offering-detail__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-24);
+}
+
+.offering-detail__body {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.9;
+  color: var(--clr-text-dark);
+}
+
+/* ─── Benefits list ─────────────────────────────────────── */
+.offering-detail__benefits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-12);
+  margin-top: var(--sp-8);
+  list-style: none;
+}
+
+.offering-detail__benefit {
+  display: flex;
+  gap: var(--sp-12);
+  align-items: flex-start;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--clr-text-dark);
+}
+
+.offering-detail__benefit::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  border-radius: 50%;
+  background-color: var(--clr-gold);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .offering-detail__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .offering-detail__image {
+    position: static;
+    aspect-ratio: 16 / 9;
+  }
+}

@@ -1,0 +1,188 @@
+/* ============================================================
+   SALTAY HANALEI BAY — Footer
+   BEM block: .footer
+   ============================================================ */
+
+/* ─── Block ────────────────────────────────────────────── */
+.footer {
+  background-color: #0e1009;
+  border-top: 1px solid var(--clr-border);
+  padding-top: var(--sp-64);
+  padding-bottom: var(--sp-32);
+}
+
+.footer__inner {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--section-px);
+  display: grid;
+  grid-template-columns: 1.4fr 2fr 1fr;
+  gap: var(--sp-64);
+}
+
+/* ─── Brand column ──────────────────────────────────────── */
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-12);
+  margin-bottom: var(--sp-20);
+  text-decoration: none;
+}
+
+.footer__logo-mark {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.footer__logo-name {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clr-cream);
+  line-height: 1.2;
+}
+
+.footer__logo-sub {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.48rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+}
+
+.footer__tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--clr-cream);
+  opacity: 0.55;
+}
+
+/* ─── Nav columns ───────────────────────────────────────── */
+.footer__nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-32);
+}
+
+.footer__nav-heading {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: var(--sp-16);
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+}
+
+.footer__nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--clr-cream);
+  opacity: 0.55;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: opacity var(--ease-fast), color var(--ease-fast);
+}
+
+.footer__nav-link:hover {
+  opacity: 1;
+  color: var(--clr-gold);
+}
+
+/* ─── Contact column ────────────────────────────────────── */
+.footer__contact-heading {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: var(--sp-16);
+}
+
+.footer__contact-text {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  line-height: 1.8;
+  color: var(--clr-cream);
+  opacity: 0.55;
+}
+
+.footer__contact-link {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--clr-cream);
+  opacity: 0.55;
+  margin-top: var(--sp-8);
+  text-decoration: none;
+  transition: opacity var(--ease-fast), color var(--ease-fast);
+}
+
+.footer__contact-link:hover {
+  opacity: 1;
+  color: var(--clr-gold);
+}
+
+/* ─── Bottom bar ────────────────────────────────────────── */
+.footer__bottom {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--section-px);
+  padding-top: var(--sp-32);
+  margin-top: var(--sp-32);
+  border-top: 1px solid var(--clr-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-16);
+}
+
+.footer__copyright {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  color: var(--clr-cream);
+  opacity: 0.35;
+  letter-spacing: 0.06em;
+}
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-48);
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

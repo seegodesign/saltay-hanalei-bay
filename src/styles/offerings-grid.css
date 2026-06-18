@@ -1,0 +1,100 @@
+/* ============================================================
+   SALTAY HANALEI BAY — Offerings Grid (Homepage)
+   BEM blocks: .offerings-section, .offering-card
+   ============================================================ */
+
+/* ─── Section wrapper ───────────────────────────────────── */
+.offerings-section {
+  background-color: var(--clr-cream);
+  padding-block: var(--section-py);
+}
+
+.offerings-section__inner {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--section-px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-48);
+}
+
+/* ─── 7-column grid ─────────────────────────────────────── */
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--sp-16);
+  width: 100%;
+}
+
+/* ─── Offering card ─────────────────────────────────────── */
+.offering-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-12);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--ease);
+}
+
+.offering-card:hover {
+  transform: translateY(-4px);
+}
+
+.offering-card__image {
+  aspect-ratio: 4 / 4;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(160deg, #2d2a18 0%, #191c10 100%);
+}
+
+.offering-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: transform var(--ease);
+}
+
+.offering-card:hover .offering-card__image img {
+  transform: scale(1.05);
+}
+
+.offering-card__title {
+  font-family: var(--font-sans);
+  font-size: 0.8;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--clr-text-dark);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.offering-card__body {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--clr-text-dark);
+  text-align: center;
+}
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .offerings-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .offerings-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-24);
+  }
+}
+
+@media (max-width: 360px) {
+  .offerings-grid {
+    grid-template-columns: 1fr;
+  }
+}

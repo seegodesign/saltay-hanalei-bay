@@ -1,0 +1,207 @@
+---
+const offerings = [
+  { label: 'Massage & Bodywork',              href: '/offerings/massage-bodywork/' },
+  { label: 'Acupuncture & Energy Medicine',   href: '/offerings/acupuncture-energy-medicine/' },
+  { label: 'Holistic Facial Rituals',         href: '/offerings/holistic-facial-rituals/' },
+  { label: 'Infrared Sauna',                  href: '/offerings/infrared-sauna/' },
+  { label: 'Sound Healing',                   href: '/offerings/sound-healing/' },
+  { label: 'Remote Sessions',                 href: '/offerings/remote-sessions/' },
+  { label: 'Wellness Retreats',               href: '/offerings/wellness-retreats/' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="nav" id="main-nav" aria-label="Main navigation">
+  <div class="nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="nav__logo" aria-label="Saltay Hanalei Bay — Home">
+      <img
+        src="/logo.svg"
+        alt=""
+        class="nav__logo"
+        width="120"
+        aria-hidden="true"
+      />
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav__links" role="list">
+
+      <!-- Offerings dropdown -->
+      <li class="nav__item nav__item--has-dropdown">
+        <a
+          href="/offerings/"
+          class="nav__link"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-current={currentPath.startsWith('/offerings') ? 'page' : undefined}
+        >
+          Offerings
+          <img
+            src="/icons/chevron-down.svg"
+            class="nav__chevron"
+            alt=""
+            aria-hidden="true"
+            width="10"
+            height="10"
+          />
+        </a>
+        <ul class="nav__dropdown" role="list">
+          {offerings.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="nav__dropdown-link"
+                aria-current={currentPath === item.href ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <a
+          href="/about/"
+          class="nav__link"
+          aria-current={currentPath === '/about/' ? 'page' : undefined}
+        >About</a>
+      </li>
+
+      <li class="nav__item">
+        <a
+          href="/contact/"
+          class="nav__link"
+          aria-current={currentPath === '/contact/' ? 'page' : undefined}
+        >Contact &amp; Locations</a>
+      </li>
+
+    </ul>
+
+    <!-- Desktop Book CTA -->
+    <div class="nav__cta">
+      <a href="/booking/" class="btn btn--primary">Book Now</a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button
+      class="nav__mobile-toggle"
+      id="nav-toggle"
+      aria-expanded="false"
+      aria-controls="nav-mobile-menu"
+      aria-label="Open navigation menu"
+    >
+      <span class="nav__mobile-toggle-bar"></span>
+      <span class="nav__mobile-toggle-bar"></span>
+      <span class="nav__mobile-toggle-bar"></span>
+    </button>
+
+  </div><!-- /.nav__inner -->
+
+  <!-- Mobile slide-in menu -->
+  <div
+    class="nav__mobile-menu"
+    id="nav-mobile-menu"
+    aria-hidden="true"
+    aria-label="Mobile navigation"
+  >
+    <ul class="nav__mobile-links" role="list">
+
+      <!-- Offerings + submenu -->
+      <li>
+        <button
+          class="nav__mobile-link"
+          id="mobile-offerings-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-offerings-submenu"
+        >
+          Offerings
+          <img
+            src="/icons/chevron-down.svg"
+            class="nav__chevron"
+            alt=""
+            aria-hidden="true"
+            width="14"
+            height="14"
+          />
+        </button>
+        <ul
+          class="nav__mobile-submenu"
+          id="mobile-offerings-submenu"
+          role="list"
+        >
+          {offerings.map((item) => (
+            <li>
+              <a href={item.href} class="nav__mobile-submenu-link">
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </li>
+
+      <li>
+        <a href="/about/" class="nav__mobile-link">About</a>
+      </li>
+      <li>
+        <a href="/contact/" class="nav__mobile-link">Contact &amp; Locations</a>
+      </li>
+
+    </ul>
+
+    <div class="nav__mobile-cta">
+      <a href="/booking/" class="btn btn--primary">Book Now</a>
+    </div>
+  </div><!-- /.nav__mobile-menu -->
+
+</nav><!-- /.nav -->
+
+<script>
+  const navEl       = document.getElementById('main-nav')!;
+  const toggle      = document.getElementById('nav-toggle')!;
+  const mobileMenu  = document.getElementById('nav-mobile-menu')!;
+  const subToggle   = document.getElementById('mobile-offerings-toggle')!;
+  const submenu     = document.getElementById('mobile-offerings-submenu')!;
+
+  // ── Hamburger toggle ──────────────────────────────────────
+  toggle.addEventListener('click', () => {
+    const isOpen = navEl.classList.toggle('nav--mobile-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // ── Offerings submenu toggle ──────────────────────────────
+  subToggle.addEventListener('click', () => {
+    const isOpen = submenu.classList.toggle('nav__mobile-submenu--open');
+    subToggle.setAttribute('aria-expanded', String(isOpen));
+    const chevron = subToggle.querySelector('.nav__chevron') as HTMLImageElement | null;
+    if (chevron) chevron.style.transform = isOpen ? 'rotate(180deg)' : '';
+  });
+
+  // ── Close menu when a link is tapped ─────────────────────
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navEl.classList.remove('nav--mobile-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open navigation menu');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // ── Close on Escape ───────────────────────────────────────
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navEl.classList.contains('nav--mobile-open')) {
+      navEl.classList.remove('nav--mobile-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      toggle.focus();
+    }
+  });
+</script>

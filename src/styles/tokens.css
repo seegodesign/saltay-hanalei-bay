@@ -1,0 +1,51 @@
+/* ============================================================
+   SALTAY HANALEI BAY — Design Tokens
+   ============================================================ */
+:root {
+  /* ─── Colors ───────────────────────────────────────────── */
+  --clr-dark:           #242017;
+  --clr-dark-mid:       #221e13;
+  --clr-dark-overlay:   rgba(15, 18, 8, 0.65);
+  --clr-gold:           #c9a55e;
+  --clr-gold-hover:     #d9b871;
+  --clr-gold-dim:       #a8893e;
+  --clr-cream:          #ede4ce;
+  --clr-cream-light:    #f5f0e6;
+  --clr-cream-mid:      #e6dcc6;
+  --clr-text-dark:      #2b2616;
+  --clr-text-light:     #ede4ce;
+  --clr-text-muted:     #7a6e4e;
+  --clr-border:         rgba(201, 165, 94, 0.2);
+  --clr-border-light:   rgba(237, 228, 206, 0.1);
+
+  /* ─── Typography ───────────────────────────────────────── */
+  --font-serif: 'Cormorant Garamond', 'Palatino Linotype', Georgia, serif;
+  --font-sans:  'Raleway', 'Trebuchet MS', Arial, sans-serif;
+
+  /* ─── Spacing scale ────────────────────────────────────── */
+  --sp-2:   0.125rem;
+  --sp-4:   0.25rem;
+  --sp-8:   0.5rem;
+  --sp-12:  0.75rem;
+  --sp-16:  1rem;
+  --sp-20:  1.25rem;
+  --sp-24:  1.5rem;
+  --sp-32:  2rem;
+  --sp-40:  2.5rem;
+  --sp-48:  3rem;
+  --sp-64:  4rem;
+  --sp-96:  6rem;
+
+  /* ─── Layout ───────────────────────────────────────────── */
+  --max-w:       1400px;
+  --nav-h:       96px;
+  --section-px:  clamp(1.25rem, 4vw, 4rem);
+  --section-py:  clamp(4rem, 8vw, 7rem);
+
+  /* ─── Effects ──────────────────────────────────────────── */
+  --ease:       0.3s ease;
+  --ease-fast:  0.15s ease;
+  --radius-sm:  2px;
+  --radius-md:  6px;
+  --radius-lg:  12px;
+}

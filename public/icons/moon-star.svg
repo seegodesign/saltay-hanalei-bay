@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"
+     stroke="#C9A55E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Crescent moon -->
+  <path d="M29 8 A16 16 0 1 0 29 40 A10 10 0 1 1 29 8Z"/>
+  <!-- Star burst (4 points) -->
+  <path d="M37 11 L38.4 15 L42.5 15 L39.2 17.5 L40.6 21.5 L37 19 L33.4 21.5 L34.8 17.5 L31.5 15 L35.6 15 Z"
+        stroke-width="0.9"/>
+</svg>

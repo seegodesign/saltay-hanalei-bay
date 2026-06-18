@@ -6,6 +6,19 @@ npm create astro@latest -- --template minimal
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
+## Sveltia CMS Setup
+
+Sveltia CMS is wired into this project at `/admin/`.
+
+1. Run the dev server with `npm run dev`.
+2. Open `http://localhost:4321/admin/`.
+3. Update the backend repo in `public/admin/config.yml`:
+	- `backend.repo`: set this to your `owner/repo`
+	- `backend.branch`: set your branch if not `main`
+
+This project is configured so editing the "Home Page" entry in Sveltia updates
+`src/content/pages/home.md`, and the homepage (`/`) renders that content.
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:

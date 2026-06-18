@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Online Booking"
+  description="Book your wellness experience at Saltay Hanalei Bay — massage, acupuncture, sound healing, retreats, and more."
+>
+
+  <section class="page-hero">
+    <span class="page-hero__eyebrow">Reserve Your Session</span>
+    <h1 class="page-hero__heading">Online Booking</h1>
+    <span class="page-hero__rule" aria-hidden="true"></span>
+    <p class="page-hero__body">
+      Choose a service below or reach out directly to begin crafting
+      your personalized healing experience.
+    </p>
+  </section>
+
+  <section class="booking-section">
+    <div class="booking-section__inner">
+
+      <div class="booking-section__intro">
+        <span class="u-label">How It Works</span>
+        <p class="booking-section__body">
+          Each session at Saltay Hanalei Bay is a fully personalized experience.
+          Select your preferred service, choose a time that works for you, and
+          our team will reach out to confirm details and any intake information
+          before your appointment.
+        </p>
+        <p class="booking-section__body">
+          For wellness retreats or custom multi-day programmes, please contact
+          us directly so we can design the perfect journey for you.
+        </p>
+      </div>
+
+      <!-- Booking embed placeholder -->
+      <div style="width: 100%; background: var(--clr-cream); border: 1.5px solid var(--clr-border); border-radius: var(--radius-md); padding: 3rem; text-align: center;">
+        <p class="u-label" style="margin-bottom: 1rem;">Booking System</p>
+        <p style="font-family: var(--font-serif); color: var(--clr-text-muted); margin-bottom: 1.5rem;">
+          Your booking widget or scheduling embed will appear here.<br />
+          Replace this block with your preferred booking platform (e.g. Acuity, Mindbody, Square).
+        </p>
+        <a href="/contact/" class="btn btn--primary">Contact Us to Book</a>
+      </div>
+
+      <!-- Service options -->
+      <div class="booking-options">
+
+        <div class="booking-option">
+          <p class="booking-option__title">Individual Sessions</p>
+          <p class="booking-option__body">
+            60 or 90-minute single-modality appointments — massage, acupuncture,
+            facial ritual, infrared sauna, or sound healing.
+          </p>
+          <a href="/contact/" class="btn btn--outline-dark btn--sm">Enquire</a>
+        </div>
+
+        <div class="booking-option">
+          <p class="booking-option__title">Integrated Experiences</p>
+          <p class="booking-option__body">
+            Half-day or full-day bespoke experiences that combine multiple healing
+            modalities into one deeply restorative journey.
+          </p>
+          <a href="/contact/" class="btn btn--outline-dark btn--sm">Enquire</a>
+        </div>
+
+        <div class="booking-option">
+          <p class="booking-option__title">Wellness Retreats</p>
+          <p class="booking-option__body">
+            Multi-day immersive retreats in Hanalei Bay, Kauai — designed
+            for deep reset, reconnection, and lasting transformation.
+          </p>
+          <a href="/offerings/wellness-retreats/" class="btn btn--outline-dark btn--sm">Learn More</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="page-cta" aria-labelledby="booking-cta">
+    <div class="page-cta__inner">
+      <h2 class="page-cta__heading" id="booking-cta">
+        Have questions before you book?
+      </h2>
+      <p class="page-cta__body">We're here to help you find the right experience.</p>
+      <a href="/contact/" class="btn btn--outline">Get in Touch</a>
+    </div>
+  </section>
+
+</BaseLayout>

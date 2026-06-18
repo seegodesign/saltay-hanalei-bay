@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"
+     stroke="#C9A55E" stroke-linecap="round">
+  <!-- Concentric circles -->
+  <circle cx="24" cy="24" r="20" stroke-width="1"/>
+  <circle cx="24" cy="24" r="13" stroke-width="0.8"/>
+  <circle cx="24" cy="24" r="7"  stroke-width="0.7"/>
+  <circle cx="24" cy="24" r="2.5" stroke-width="0.6" fill="rgba(201,165,94,0.25)"/>
+  <!-- Diamond accents at cardinal points of outer circle -->
+  <path d="M24 2 L25.6 4 L24 6 L22.4 4 Z"  stroke-width="0.8" fill="rgba(201,165,94,0.15)"/>
+  <path d="M24 42 L25.6 44 L24 46 L22.4 44 Z" stroke-width="0.8" fill="rgba(201,165,94,0.15)"/>
+  <path d="M2 24 L4 25.6 L6 24 L4 22.4 Z"  stroke-width="0.8" fill="rgba(201,165,94,0.15)"/>
+  <path d="M42 24 L44 25.6 L46 24 L44 22.4 Z" stroke-width="0.8" fill="rgba(201,165,94,0.15)"/>
+</svg>

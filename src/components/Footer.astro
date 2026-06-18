@@ -1,0 +1,87 @@
+---
+const offerings = [
+  { label: 'Massage & Bodywork',            href: '/offerings/massage-bodywork/' },
+  { label: 'Acupuncture & Energy Medicine', href: '/offerings/acupuncture-energy-medicine/' },
+  { label: 'Holistic Facial Rituals',       href: '/offerings/holistic-facial-rituals/' },
+  { label: 'Infrared Sauna',                href: '/offerings/infrared-sauna/' },
+  { label: 'Sound Healing',                 href: '/offerings/sound-healing/' },
+  { label: 'Remote Sessions',               href: '/offerings/remote-sessions/' },
+  { label: 'Wellness Retreats',             href: '/offerings/wellness-retreats/' },
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer__inner">
+
+    <!-- Brand -->
+    <div class="footer__brand">
+      <a href="/" class="footer__logo">
+        <img
+          src="/icons/logo-mark.svg"
+          alt=""
+          class="footer__logo-mark"
+          width="40"
+          height="40"
+          aria-hidden="true"
+        />
+        <span>
+          <span class="footer__logo-name">Saltay</span>
+          <span class="footer__logo-sub">Hanalei Bay</span>
+        </span>
+      </a>
+      <p class="footer__tagline">
+        Luxury wellness experiences that restore balance, awaken vitality,
+        and reconnect you to your highest self.
+      </p>
+    </div>
+
+    <!-- Navigation columns -->
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <div class="footer__nav-group">
+        <p class="footer__nav-heading">Pages</p>
+        <ul class="footer__nav-list">
+          <li><a href="/"         class="footer__nav-link">Home</a></li>
+          <li><a href="/offerings/" class="footer__nav-link">Offerings</a></li>
+          <li><a href="/about/"   class="footer__nav-link">About</a></li>
+          <li><a href="/contact/" class="footer__nav-link">Contact &amp; Locations</a></li>
+          <li><a href="/booking/" class="footer__nav-link">Online Booking</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__nav-group">
+        <p class="footer__nav-heading">Offerings</p>
+        <ul class="footer__nav-list">
+          {offerings.map((o) => (
+            <li>
+              <a href={o.href} class="footer__nav-link">{o.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contact -->
+    <div class="footer__contact">
+      <p class="footer__contact-heading">Visit Us</p>
+      <p class="footer__contact-text">
+        Hanalei Bay, Kauai<br />
+        Hawai'i, USA
+      </p>
+      <a href="mailto:hello@saltayhanalei.com" class="footer__contact-link">
+        hello@saltayhanalei.com
+      </a>
+      <div style="margin-top: 1.5rem;">
+        <a href="/booking/" class="btn btn--outline btn--sm">Book Now</a>
+      </div>
+    </div>
+
+  </div><!-- /.footer__inner -->
+
+  <div class="footer__bottom">
+    <p class="footer__copyright">
+      &copy; {year} Saltay Hanalei Bay. All rights reserved.
+    </p>
+  </div>
+</footer>

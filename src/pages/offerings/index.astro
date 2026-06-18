@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const offerings = [
+  {
+    slug: 'massage-bodywork',
+    title: 'Massage & Bodywork',
+    body: 'Therapeutic touch to release tension, improve circulation, and restore balance.',
+  },
+  {
+    slug: 'acupuncture-energy-medicine',
+    title: 'Acupuncture & Energy Medicine',
+    body: 'Ancient techniques that balance energy, support healing, and optimize well-being.',
+  },
+  {
+    slug: 'holistic-facial-rituals',
+    title: 'Holistic Facial Rituals',
+    body: 'Botanical facials that nourish, detoxify, and illuminate your natural radiance.',
+  },
+  {
+    slug: 'infrared-sauna',
+    title: 'Infrared Sauna',
+    body: 'Deep detoxification, cellular rejuvenation, and relaxation through infrared heat.',
+  },
+  {
+    slug: 'sound-healing',
+    title: 'Sound Healing',
+    body: 'Therapeutic sound journeys that calm the nervous system and restore energetic harmony.',
+  },
+  {
+    slug: 'remote-sessions',
+    title: 'Remote Sessions',
+    body: 'Metaphysical & energetic healing sessions from anywhere in the world.',
+  },
+  {
+    slug: 'wellness-retreats',
+    title: 'Wellness Retreats',
+    body: 'Immersive retreats and immersions to reset, reconnect, and transform.',
+  },
+];
+---
+
+<BaseLayout
+  title="Offerings"
+  description="Explore our signature wellness offerings — from massage and acupuncture to sound healing, infrared sauna, and immersive wellness retreats."
+>
+
+  <section class="page-hero">
+    <span class="page-hero__eyebrow">What We Offer</span>
+    <h1 class="page-hero__heading">Our Signature Wellness Offerings</h1>
+    <span class="page-hero__rule" aria-hidden="true"></span>
+    <p class="page-hero__body">
+      Each offering is a doorway to deeper healing — crafted to meet you exactly
+      where you are and guide you toward your highest well-being.
+    </p>
+  </section>
+
+  <section class="offerings-index">
+    <div class="offerings-index__inner">
+      <span class="u-label">All Services</span>
+      <div class="offerings-index__grid">
+        {offerings.map((o) => (
+          <a href={`/offerings/${o.slug}/`} class="offerings-index-card">
+            <div class="offerings-index-card__image" aria-hidden="true"></div>
+            <p class="offerings-index-card__title">{o.title}</p>
+            <p class="offerings-index-card__body">{o.body}</p>
+            <span class="offerings-index-card__cta" aria-hidden="true">
+              Learn more &rsaquo;
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="page-cta" aria-labelledby="offerings-cta-heading">
+    <div class="page-cta__inner">
+      <h2 class="page-cta__heading" id="offerings-cta-heading">
+        Ready to begin your journey?
+      </h2>
+      <p class="page-cta__body">Elevated Healing. Lasting Transformation.</p>
+      <a href="/booking/" class="btn btn--primary">Book Your Experience</a>
+    </div>
+  </section>
+
+</BaseLayout>
