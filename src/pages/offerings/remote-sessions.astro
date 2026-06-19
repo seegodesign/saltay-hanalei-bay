@@ -10,7 +10,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="page-hero">
     <span class="page-hero__eyebrow">Signature Offerings</span>
     <h1 class="page-hero__heading">Remote Sessions</h1>
-    <span class="page-hero__rule" aria-hidden="true"></span>
+    <img src="/icons/spiral-rule.svg" class="page-hero__rule" alt="" aria-hidden="true" />
     <p class="page-hero__body">
       Metaphysical &amp; energetic healing sessions from anywhere in the world.
     </p>
@@ -19,7 +19,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="offering-detail">
     <div class="offering-detail__inner">
 
-      <div class="offering-detail__image" aria-hidden="true"></div>
+      <div class="offering-detail__image">
+        <img
+          src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?q=80&w=800&auto=format&fit=crop"
+          alt="Man sitting alone on a rock surrounded by calm water in serene contemplation"
+          loading="lazy"
+        />
+      </div>
 
       <div class="offering-detail__content">
         <span class="u-label">About This Service</span>

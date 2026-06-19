@@ -39,9 +39,8 @@
 
 .page-hero__rule {
   display: block;
-  width: 60px;
-  height: 1.5px;
-  background-color: var(--clr-gold);
+  width: 160px;
+  height: auto;
 }
 
 .page-hero__body {

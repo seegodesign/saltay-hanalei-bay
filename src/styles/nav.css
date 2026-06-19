@@ -11,6 +11,19 @@
   right: 0;
   z-index: 200;
   height: var(--nav-h);
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.35s ease,
+    backdrop-filter 0.35s ease,
+    -webkit-backdrop-filter 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.nav--scrolled,
+.nav--mobile-open {
   background-color: rgba(61, 55, 42, 0.84);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -38,7 +51,7 @@
 }
 
 .nav__logo {
-  width: 180px;
+  width: 200px;
   flex-shrink: 0;
 }
 
@@ -224,12 +237,17 @@
   bottom: 0;
   background-color: rgba(18, 21, 11, 0.99);
   overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
   padding: var(--sp-24) var(--section-px) var(--sp-48);
   transform: translateX(100%);
   transition: transform var(--ease);
   z-index: 199;
   display: flex;
   flex-direction: column;
+  /* Prevent the panel from shrinking shorter than the viewport */
+  min-height: calc(100dvh - var(--nav-h));
+  height: calc(100dvh - var(--nav-h));
 }
 
 .nav--mobile-open .nav__mobile-menu {

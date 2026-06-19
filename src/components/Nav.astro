@@ -194,6 +194,13 @@ const currentPath = Astro.url.pathname;
     });
   });
 
+  // ── Scroll-aware background ──────────────────────────────
+  const onScroll = () => {
+    navEl.classList.toggle('nav--scrolled', window.scrollY > 20);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
   // ── Close on Escape ───────────────────────────────────────
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && navEl.classList.contains('nav--mobile-open')) {

@@ -6,36 +6,50 @@ const offerings = [
     slug: 'massage-bodywork',
     title: 'Massage & Bodywork',
     body: 'Therapeutic touch to release tension, improve circulation, and restore balance.',
+    image: 'https://plus.unsplash.com/premium_photo-1661757559191-46925b9a526f?q=80&w=600&auto=format&fit=crop',
+    imageAlt: 'Woman receiving a relaxing back massage at a spa',
   },
   {
     slug: 'acupuncture-energy-medicine',
     title: 'Acupuncture & Energy Medicine',
     body: 'Ancient techniques that balance energy, support healing, and optimize well-being.',
+    image: 'https://images.unsplash.com/photo-1523681504355-8b4860f99a58?q=80&w=600&auto=format&fit=crop',
+    imageAlt: 'Black ceramic Buddha figurine symbolizing energy and spirituality',
   },
   {
     slug: 'holistic-facial-rituals',
     title: 'Holistic Facial Rituals',
     body: 'Botanical facials that nourish, detoxify, and illuminate your natural radiance.',
+    image: 'https://images.unsplash.com/photo-1761718210089-ba3bb5ccb54f?q=80&w=600&auto=format&fit=crop',
+    imageAlt: 'Person receiving a holistic facial treatment',
   },
   {
     slug: 'infrared-sauna',
     title: 'Infrared Sauna',
     body: 'Deep detoxification, cellular rejuvenation, and relaxation through infrared heat.',
+    image: 'https://images.unsplash.com/photo-1741601273168-04934064889f?q=80&w=600&auto=format&fit=crop',
+    imageAlt: 'Man relaxing in a steamy infrared sauna',
   },
   {
     slug: 'sound-healing',
     title: 'Sound Healing',
     body: 'Therapeutic sound journeys that calm the nervous system and restore energetic harmony.',
+    image: 'https://plus.unsplash.com/premium_photo-1689254722413-39d278eaf6d6?q=80&w=600&auto=format&fit=crop',
+    imageAlt: 'Group in a sound healing session lying on the floor',
   },
   {
     slug: 'remote-sessions',
     title: 'Remote Sessions',
     body: 'Metaphysical & energetic healing sessions from anywhere in the world.',
+    image: 'https://images.unsplash.com/photo-1526779259212-939e64788e3c?q=80&w=600&auto=format&fit=crop',
+    imageAlt: 'Man sitting alone on a rock surrounded by water in serene contemplation',
   },
   {
     slug: 'wellness-retreats',
     title: 'Wellness Retreats',
     body: 'Immersive retreats and immersions to reset, reconnect, and transform.',
+    image: 'https://plus.unsplash.com/premium_photo-1725983645487-5ea02c65ecaf?q=80&w=600&auto=format&fit=crop',
+    imageAlt: 'Two women practicing yoga in a lush forest setting',
   },
 ];
 ---
@@ -135,7 +149,9 @@ const offerings = [
       <div class="offerings-grid">
         {offerings.map((o) => (
           <a href={`/offerings/${o.slug}/`} class="offering-card">
-            <div class="offering-card__image" aria-hidden="true"></div>
+            <div class="offering-card__image">
+              <img src={o.image} alt={o.imageAlt} loading="lazy" />
+            </div>
             <p class="offering-card__title">{o.title}</p>
             <p class="offering-card__body">{o.body}</p>
           </a>

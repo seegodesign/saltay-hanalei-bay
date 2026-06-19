@@ -25,6 +25,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Cormorant Garamond has very thin strokes at weight 400 — bump all
+   paragraph-level serif text to 500 for legibility. */
+[class*="__body"],
+[class*="__benefit"] {
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
 img,
 video {
   display: block;
@@ -63,7 +72,7 @@ button {
 .u-label {
   display: block;
   font-family: var(--font-sans);
-  font-size: 1.65rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;

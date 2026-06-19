@@ -10,7 +10,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="page-hero">
     <span class="page-hero__eyebrow">Signature Offerings</span>
     <h1 class="page-hero__heading">Acupuncture &amp; Energy Medicine</h1>
-    <span class="page-hero__rule" aria-hidden="true"></span>
+    <img src="/icons/spiral-rule.svg" class="page-hero__rule" alt="" aria-hidden="true" />
     <p class="page-hero__body">
       Ancient techniques that balance energy, support healing, and optimize well-being.
     </p>
@@ -19,7 +19,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="offering-detail">
     <div class="offering-detail__inner">
 
-      <div class="offering-detail__image" aria-hidden="true"></div>
+      <div class="offering-detail__image">
+        <img
+          src="https://images.unsplash.com/photo-1523681504355-8b4860f99a58?q=80&w=800&auto=format&fit=crop"
+          alt="Black ceramic Buddha figurine symbolizing energy medicine and spirituality"
+          loading="lazy"
+        />
+      </div>
 
       <div class="offering-detail__content">
         <span class="u-label">About This Service</span>

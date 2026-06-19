@@ -10,7 +10,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="page-hero">
     <span class="page-hero__eyebrow">Signature Offerings</span>
     <h1 class="page-hero__heading">Massage &amp; Bodywork</h1>
-    <span class="page-hero__rule" aria-hidden="true"></span>
+    <img src="/icons/spiral-rule.svg" class="page-hero__rule" alt="" aria-hidden="true" />
     <p class="page-hero__body">
       Therapeutic touch to release tension, improve circulation, and restore balance.
     </p>
@@ -20,7 +20,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <div class="offering-detail__inner">
 
       <!-- Replace with <img> once imagery is available -->
-      <div class="offering-detail__image" aria-hidden="true"></div>
+      <div class="offering-detail__image">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1661757559191-46925b9a526f?q=80&w=800&auto=format&fit=crop"
+          alt="Woman receiving a relaxing back massage at a spa"
+          loading="lazy"
+        />
+      </div>
 
       <div class="offering-detail__content">
         <span class="u-label">About This Service</span>
