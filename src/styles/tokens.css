@@ -3,9 +3,9 @@
    ============================================================ */
 :root {
   /* ─── Colors ───────────────────────────────────────────── */
-  --clr-dark:           #242017;
-  --clr-dark-mid:       #221e13;
-  --clr-dark-overlay:   rgba(15, 18, 8, 0.65);
+  --clr-dark:           #171b24;
+  --clr-dark-mid:       #131c22;
+  --clr-dark-overlay:   #131c22cc;
   --clr-gold:           #c9a55e;
   --clr-gold-hover:     #d9b871;
   --clr-gold-dim:       #a8893e;

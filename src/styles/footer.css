@@ -5,7 +5,7 @@
 
 /* ─── Block ────────────────────────────────────────────── */
 .footer {
-  background-color: #0e1009;
+  background-color: var(--clr-dark);
   border-top: 1px solid var(--clr-border);
   padding-top: var(--sp-64);
   padding-bottom: var(--sp-32);

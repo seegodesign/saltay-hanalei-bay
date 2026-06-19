@@ -24,7 +24,7 @@
 
 .nav--scrolled,
 .nav--mobile-open {
-  background-color: rgba(61, 55, 42, 0.84);
+  background-color: var(--clr-dark-overlay);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--clr-border);
