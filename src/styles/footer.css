@@ -59,7 +59,7 @@
 .footer__tagline {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   line-height: 1.7;
   color: var(--clr-cream);
   opacity: 0.55;
@@ -90,7 +90,7 @@
 
 .footer__nav-link {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: .9rem;
   color: var(--clr-cream);
   opacity: 0.55;
   letter-spacing: 0.06em;
@@ -125,7 +125,7 @@
 .footer__contact-link {
   display: inline-block;
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: .9rem;
   color: var(--clr-cream);
   opacity: 0.55;
   margin-top: var(--sp-8);

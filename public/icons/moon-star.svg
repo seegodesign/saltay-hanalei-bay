@@ -1,8 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"
-     stroke="#C9A55E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-  <!-- Crescent moon -->
-  <path d="M29 8 A16 16 0 1 0 29 40 A10 10 0 1 1 29 8Z"/>
-  <!-- Star burst (4 points) -->
-  <path d="M37 11 L38.4 15 L42.5 15 L39.2 17.5 L40.6 21.5 L37 19 L33.4 21.5 L34.8 17.5 L31.5 15 L35.6 15 Z"
-        stroke-width="0.9"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <path d="M37,11l1.4,4h4.1l-3.3,2.5,1.4,4-3.6-2.5-3.6,2.5,1.4-4-3.3-2.5h4.1l1.4-4Z" fill="none" stroke="#c9a55e" stroke-linecap="round" stroke-linejoin="round" stroke-width=".9"/>
+  <path d="M20.2,23.03c0-5.61,3.54-10.37,8.5-12.22-1.42-.53-2.94-.83-4.54-.83-7.21,0-13.05,5.84-13.05,13.05s5.84,13.05,13.05,13.05c1.6,0,3.13-.3,4.54-.83-4.96-1.85-8.5-6.61-8.5-12.22Z" fill="none" stroke="#c9a55e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"/>
 </svg>

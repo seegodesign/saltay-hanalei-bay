@@ -110,7 +110,7 @@
   align-items: center;
   gap: var(--sp-8);
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: .8rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -284,7 +284,7 @@
 
 .contact-form__label {
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: .8rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -336,18 +336,11 @@
   margin-bottom: var(--sp-12);
 }
 
-.contact-location__address {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  line-height: 1.8;
-  color: var(--clr-text-dark);
-}
-
 .contact-location__link {
   display: inline-block;
   margin-top: var(--sp-8);
   font-family: var(--font-sans);
-  font-size: 0.6rem;
+  font-size: .8rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
